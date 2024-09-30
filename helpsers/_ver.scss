@@ -1,0 +1,15 @@
+$let-color:aqua;
+
+$borber:#999;
+
+$color:rgb(206, 129, 35);
+@mixin flex($justify,$align, $text,$content,$wrap){
+    display: flex;
+    align-items: $justify;
+    justify-content: $align;
+    text-align: $text;
+
+    align-content: $content;
+    flex-wrap: $wrap;
+}
+

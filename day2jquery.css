@@ -1,0 +1,13 @@
+#data-container {
+    margin-top: 20px;
+}
+
+.user {
+    border: 4px solid #8b6ada;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#error-image {
+    width: 100px;
+    margin-top: 20px;
+}

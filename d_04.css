@@ -1,0 +1,101 @@
+body{background-color: black; color: blue;}
+.fg{
+    background-color: bisque;
+    height: 15px;
+}
+h2{
+    margin-top: 0;
+    padding: 0;
+}
+.head{
+
+    text-align: center;
+    color: blue;
+    background-color: aqua;
+    height: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.head a{    padding: 5px; text-decoration: none; }
+.head a:hover{
+    box-shadow: 5px 5px 15px 15px #eff;
+    padding: 5px;
+    background-color: blueviolet;
+    color: #eff;
+}
+.aa{
+    color: blue;
+    margin: 10px 10px 10px 10px;
+}
+
+.box{ 
+    display: inline-block;
+    width: 250px;
+    color: orangered;
+    text-align: center;
+    margin: 30px;
+}
+.box:hover{
+    box-shadow: 5px 5px 5px #eff;
+    border: 1.45px solid blue;
+    border-radius: 3%;
+}
+.box button{
+    color: blueviolet;
+    background-color: brown;
+    border: 1px solid blue;
+    border-radius: 10px;
+    align-content: center;
+    width: 80px;
+    height: 25px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.box button:hover{
+    color: rgb(32, 174, 27);
+    background-color: rgb(39, 16, 194);
+    border: 1px solid rgb(209, 23, 107);
+    border-radius: 10px;
+    align-content: center;
+}
+.box img{
+    margin-top: 8px;
+    width: 100px; 
+    filter: blur(5px);
+}
+.box img:hover{
+    filter: blur(0);
+}
+ .info { 
+    display:inline;    
+}
+.con {
+    display:inline-block; 
+    margin-left: 20px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+form input{
+    display: block;
+    border: 2px solid greenyellow;
+}
+.con button{
+    color: blueviolet;
+    background-color: brown;
+    border: 1px solid blue;
+    border-radius: 10px;
+    align-content: center;
+    height: 25px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+footer{
+    color: aliceblue;
+    background-color: aqua;
+    text-align: center;
+    height: 40px;
+    text-align: center;
+    font-size: 2em;
+}

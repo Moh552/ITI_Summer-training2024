@@ -1,0 +1,48 @@
+body{
+    background-color: aquamarine;
+    padding: 5px;
+    margin: 5px;
+}
+.img{
+    width: 150px;
+    height: 250px;
+    display: flex;
+    align-items: stretch;
+    position: absolute;
+    left: 200px;
+    top: 250px;
+}img{    padding: 10px;}
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    left: 200px;
+    right: 500px;
+    top: 250px;
+}
+
+/* #lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+} */
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0 1em;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}

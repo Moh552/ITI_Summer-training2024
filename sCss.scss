@@ -1,0 +1,22 @@
+$let-color:rgb(136, 44, 139);
+.vd{
+    border: 2px solid orangered;
+    background-color: chartreuse;
+    p{
+        color: $let-color;
+        border: 4px solid rgb(109, 36, 177);
+        padding: 20px;
+        span{
+            background-color: aquamarine;
+            font-size: 1.5em;
+            margin: 5px;
+            padding: 5px;
+            border: 4px solid rgb(101, 26, 137);
+        }
+    }
+}
+@for $i from 1 through 16{
+    .col-#{$i}{
+        width: ($i / 16 * 100%);
+    }
+}

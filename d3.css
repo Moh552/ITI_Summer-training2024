@@ -1,0 +1,24 @@
+body{
+    color: blue;
+}
+div{
+    background-color: #252525;
+    text-align: center;
+   text-transform: uppercase;
+   word-spacing: 25px;
+}
+a{
+    color: chocolate;
+}
+div a:hover{
+    text-decoration: none;
+    color: hotpink;
+    transition: 0.6ms;
+    cursor: pointer;
+}
+ul {
+    list-style: lower-roman;
+}
+p{
+    text-align: left;
+}

@@ -1,0 +1,35 @@
+body {
+    color: blue;
+}
+
+div {
+    background-color: #252525;
+    text-transform: uppercase;
+    width: 300px;
+}
+
+h2 {
+
+    text-decoration: underline;
+}
+
+li:hover {
+    text-decoration: none;
+    color: hotpink;
+    transition: 0.6ms;
+    cursor: pointer;
+}
+
+#a1 {
+    text-decoration: line-through;
+    color: green;
+}
+
+#a2 {
+    text-decoration: line-through;
+    color: orange;
+}
+
+ul {
+    list-style: upper-latin;
+}

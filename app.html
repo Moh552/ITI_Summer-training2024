@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Job Application</h2>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="moh@amed83.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+                <label for="university">University:</label>
+                <input type="text" id="university" name="university">
+
+                <label for="faculty">Faculty:</label>
+                <input type="text" id="faculty" name="faculty">
+
+                <label for="graduation">Date of Graduation:</label>
+                <input type="date" id="graduation" name="graduation">
+            </fieldset>
+
+            <fieldset>
+                <legend>Technical Information</legend>
+                <label for="position">Position:</label>
+                <select id="position" name="position">
+                    <option value="backend">Backend Developer</option>
+                    <option value="frontend">Frontend Developer</option>
+                    <option value="fullstack">Full Stack Developer</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="technologies">Technologies:</label>
+                <select id="technologies" name="technologies" multiple>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="nodejs">Node.js</option>
+                    <option value="react">React</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="cv">Upload CV:</label>
+                <input type="file" id="cv" name="cv">
+            </fieldset>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+
+</html>

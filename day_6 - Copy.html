@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        a img {
+            width: 150px;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 12px;
+        }
+
+        a img:hover {
+            border: 2px solid brown;
+            transform: scale(1.1);
+            transition: all 0.5s ease-in-out;
+        }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-family: "Courier New", Courier, monospace;
+            background-color: black;
+        }
+
+        #main {
+            width: 400px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid brown;
+            padding: 30px 5px;
+            border-radius: 12px;
+            background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Select Image 📷</h1>
+        <div>
+            <img id="main"
+                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYnNpdGV8ZW58MHwwfDB8fHwy"
+                alt="" />
+        </div>
+        <div id="imagesClick">
+            <a href="https://unsplash.com/photos/assorted-color-abstract-painting-tZc3vjPCk-Q" target="_blank"><img
+                    src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYnNpdGV8ZW58MHwwfDB8fHwy" /></a>
+            <a href="https://unsplash.com/photos/silver-imac-turned-on-inside-room-DtDlVpy-vvQ" target="_blank"><img
+                    src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></a>
+            <a href="https://unsplash.com/photos/turned-on-silver-imac-ir5lIkVFqC4" target="_blank"><img
+                    src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHdlYnNpdGV8ZW58MHwwfDB8fHwy" /></a>
+            <a href="https://unsplash.com/photos/magic-keyboard-beside-mug-and-click-pen-VieM9BdZKFo"
+                target="_blank"><img
+                    src="https://images.unsplash.com/photo-1518655048521-f130df041f66?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYnNpdGV8ZW58MHwwfDB8fHwy" /></a>
+            <a href="https://unsplash.com/photos/people-sitting-down-near-table-with-assorted-laptop-computers-SYTO3xs06fU"
+                target="_blank"><img
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHdlYnNpdGV8ZW58MHwwfDB8fHwy" /></a>
+        </div>
+    </section>
+    <script src="./day_6 - Copy.js"></script>
+</body>
+
+</html>

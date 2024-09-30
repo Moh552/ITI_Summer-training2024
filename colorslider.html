@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Slider</title>
+    <style>
+        .sliders,
+        .output {
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+
+        .sliders {
+            width: 200px;
+        }
+
+        .color {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+            margin: 0 20px;
+            vertical-align: middle;
+        }
+
+        .sliders dt,
+        .output dt {
+            float: left;
+            clear: left;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .sliders dd,
+        .output dd {
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sliders">
+        <dl>
+            <dt>R: <span id="r-val"></span></dt>
+            <dd><input type="range" id="r-slider" min="0" max="255" value="255"></dd>
+            <dt>G: <span id="g-val"></span></dt>
+            <dd><input type="range" id="g-slider" min="0" max="255" value="255"></dd>
+            <dt>B: <span id="b-val"></span></dt>
+            <dd><input type="range" id="b-slider" min="0" max="255" value="255"></dd>
+        </dl>
+    </div>
+    <div class="color"></div>
+    <div class="output">
+        <dl>
+            <dt>RGB:</dt>
+            <dd id="rgb"></dd>
+        </dl>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var sliders = {
+                r: document.getElementById('r-slider'),
+                g: document.getElementById('g-slider'),
+                b: document.getElementById('b-slider')
+            };
+
+            var vals = {
+                r: document.getElementById('r-val'),
+                g: document.getElementById('g-val'),
+                b: document.getElementById('b-val')
+            };
+
+            var color = document.querySelector('.color'),
+                rgb = document.getElementById('rgb');
+
+            function updateColors() {
+                var r = sliders.r.value,
+                    g = sliders.g.value,
+                    b = sliders.b.value,
+                    rgbStr = `rgb(${r}, ${g}, ${b})`;
+
+                color.style.backgroundColor = rgbStr;
+                rgb.textContent = rgbStr;
+                vals.r.textContent = r;
+                vals.g.textContent = g;
+                vals.b.textContent = b;
+            }
+
+            sliders.r.addEventListener('input', updateColors);
+            sliders.g.addEventListener('input', updateColors);
+            sliders.b.addEventListener('input', updateColors);
+
+            updateColors();
+        });
+    </script>
+</body>
+
+</html>

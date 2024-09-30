@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشغل الموسيقى</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .music-player {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .music-player img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .controls button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .controls button:hover {
+            background-color: #ff8533;
+        }
+
+        .track-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="music-player">
+        <h2>مشغل الموسيقى</h2>
+        <img src="images/your-image.jpg" alt="صورة المغني">
+        <audio id="audio"></audio>
+        <div class="controls">
+            <button id="prev">السابق</button>
+            <button id="playPause">تشغيل/إيقاف</button>
+            <button id="next">التالي</button>
+        </div>
+        <div class="track-info">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+    </div>
+    <script>
+        const audio = document.getElementById('audio');
+        const playPauseBtn = document.getElementById('playPause');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        const currentTimeElem = document.getElementById('current-time');
+        const durationElem = document.getElementById('duration');
+
+        let isPlaying = false;
+        const tracks = ['D:\برمجه\mohamed Hassan ahmed ITI frontend course\Correct Answer.mp3', 'D:\برمجه\mohamed Hassan ahmed ITI frontend course\boom sound effect.mp3', 'd:\aD:\برمجه\mohamed Hassan ahmed ITI frontend course\Bell ding.MP3udio\Bell ding.MP3'];
+        let currentTrackIndex = 0;
+
+        function playPauseAudio() {
+            if (isPlaying) {
+                audio.pause();
+                playPauseBtn.textContent = 'تشغيل';
+            } else {
+                audio.play();
+                playPauseBtn.textContent = 'إيقاف';
+            }
+            isPlaying = !isPlaying;
+        }
+
+        function updateTrackInfo() {
+            audio.src = tracks[currentTrackIndex];
+            playPauseBtn.textContent = 'تشغيل';
+            isPlaying = false;
+            audio.currentTime = 0;
+            currentTimeElem.textContent = formatTime(audio.currentTime);
+            durationElem.textContent = formatTime(audio.duration);
+        }
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            seconds = Math.floor(seconds % 60);
+            return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+        audio.addEventListener('timeupdate', () => {
+            currentTimeElem.textContent = formatTime(audio.currentTime);
+        });
+
+        audio.addEventListener('loadedmetadata', () => {
+            durationElem.textContent = formatTime(audio.duration);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+            updateTrackInfo();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+            updateTrackInfo();
+        });
+
+        playPauseBtn.addEventListener('click', playPauseAudio);
+
+        // Initialize the first track
+        updateTrackInfo();
+    </script>
+</body>
+</html>

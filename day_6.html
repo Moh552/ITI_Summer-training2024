@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            font-size: large;
+        }
+
+        .hide li {
+            display: none;
+        }
+
+        #menu {
+            width: 90%;
+            display: block;
+            background-color: blanchedalmond;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            list-style-position: inside;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to DropList 📃</h1>
+    <ul id="menu">
+        <li>
+            Animals
+            <ul>
+                <li>
+                    Mammals
+                    <ul>
+                        <li>Cats 🐱</li>
+                        <li>Dogs 🐶</li>
+                    </ul>
+                </li>
+                <li>
+                    Other
+                    <ul>
+                        <li>Birds 🐦</li>
+                        <li>Snakes 🐍</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Fishes
+            <ul>
+                <li>
+                    Aquariu
+                    <ul>
+                        <li>Guppy</li>
+                        <li>Angelfish</li>
+                    </ul>
+                </li>
+                <li>
+                    Aquariu
+                    <ul>
+                        <li>Sea trout</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script src="day_6.js"></script>
+</body>
+
+</html>
